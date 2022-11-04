@@ -1,0 +1,102 @@
+body {
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  text-align: center;
+  margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  margin: 0;
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* header
+=====================================*/
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+.header__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 48px 40px 0 40px;
+}
+
+.nav__list {
+  display: flex;
+  list-style-type: none;
+}
+.nav__item {
+  margin-right: 40px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  color: white;
+}
+.nav__item:hover {
+  transition: text-decoration 2s;
+}
+
+/*===================================================*/
+/* intro
+==================================================*/
+.intro {
+  height: 100vh;
+  background-image: url("../img/introBG.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  text-align: center;
+}
+
+.intro__inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: white;
+  font-family: "Inter";
+  padding-top: 280px;
+}
+.intro__inner .logo {
+  padding-bottom: 33px;
+}
+.intro__inner .main__title {
+  padding-bottom: 24px;
+  font-size: 96px;
+  font-weight: 700px;
+}
+.intro__inner .main__description {
+  font-size: 32px;
+  padding-bottom: 48px;
+}
+.intro__inner .intro__button {
+  width: 160px;
+  height: 30px;
+  background-color: transparent;
+  border: solid 2px white;
+  text-transform: uppercase;
+  color: white;
+  transition: all 2s;
+  cursor: pointer;
+}
+.intro__inner .intro__button:hover {
+  background-color: black;
+}
