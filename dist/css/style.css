@@ -49,9 +49,6 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 16px;
   color: white;
 }
-.nav__item:hover {
-  transition: text-decoration 2s;
-}
 
 /*===================================================*/
 /* intro
@@ -87,16 +84,156 @@ h1, h2, h3, h4, h5, h6, p {
   font-size: 32px;
   padding-bottom: 48px;
 }
-.intro__inner .intro__button {
-  width: 160px;
-  height: 30px;
+
+/* Button style
+========================================*/
+.button {
+  display: inline-block;
+  width: 200px;
+  height: 50px;
   background-color: transparent;
-  border: solid 2px white;
-  text-transform: uppercase;
-  color: white;
-  transition: all 2s;
   cursor: pointer;
+  color: white;
+  border: solid 2px rgb(255, 255, 255);
+  text-transform: uppercase;
+  transition: all 2s;
 }
-.intro__inner .intro__button:hover {
+.button:hover {
   background-color: black;
 }
+
+/*=================================================*/
+/* Benefits
+============================================*/
+.benefits {
+  display: flex;
+  justify-content: space-between;
+  background-image: url("../img/bgbg.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  margin: 144px 0;
+}
+.benefits .leftlist {
+  list-style-type: none;
+}
+.benefits .rightlist {
+  list-style-type: none;
+}
+
+.itemlf {
+  padding-bottom: 48px;
+}
+.itemlf__content {
+  width: 272px;
+  position: relative;
+  text-align: right;
+  font-family: "Inter", sans-serif;
+}
+.itemlf__content--one::after {
+  content: url("../img/indoor.png");
+  position: absolute;
+  right: -71px;
+  top: 0;
+  left: auto;
+}
+.itemlf__content--two::after {
+  content: url("../img/petfriendly.png");
+  position: absolute;
+  right: -71px;
+  top: 0;
+  left: auto;
+}
+.itemlf__content--three::after {
+  content: url("../img/tekaaway.png");
+  position: absolute;
+  right: -71px;
+  top: 0;
+  left: auto;
+}
+.itemlf__title {
+  text-transform: uppercase;
+  font-size: 16px;
+  line-height: 24px;
+}
+.itemlf__description {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+.itemrl {
+  padding-bottom: 48px;
+}
+.itemrl__content {
+  width: 272px;
+  position: relative;
+  text-align: left;
+  font-family: "Inter", sans-serif;
+}
+.itemrl__content--one::before {
+  content: url("../img/wheelchair.png");
+  position: absolute;
+  right: auto;
+  top: 0;
+  left: -80px;
+}
+.itemrl__content--two::before {
+  content: url("../img/veganoptions.png");
+  position: absolute;
+  right: auto;
+  top: 0;
+  left: -80px;
+}
+.itemrl__content--three::before {
+  content: url("../img/cyclistfriendly.png");
+  position: absolute;
+  right: auto;
+  top: 0;
+  left: -80px;
+}
+.itemrl__title {
+  font-size: 16px;
+  text-transform: uppercase;
+  line-height: 24px;
+}
+.itemrl__description {
+  font-size: 14px;
+  line-height: 24px;
+}
+
+/*=======================================================*/
+/* About 
+=======================================================*/
+.about {
+  height: 432px;
+  background-image: url("../img/about.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.about__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding-top: 90px;
+}
+.about__title {
+  font-size: 40px;
+  padding-bottom: 24px;
+}
+.about__title::after {
+  content: "";
+  display: block;
+  border-bottom: 2px solid;
+  color: white;
+  width: 189px;
+  padding-top: 24px;
+  margin: 0 auto;
+}
+.about__description {
+  font-size: 16px;
+  padding-bottom: 48px;
+}
+
+/*===================================*/

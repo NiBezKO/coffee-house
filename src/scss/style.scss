@@ -8,6 +8,7 @@
 $font-family: "Inter", sans-serif;
 $colorNavText: white;
 $colorIntroText: white;
+$colorTextAbout: white;
 
 
 /* header
@@ -46,9 +47,7 @@ $colorIntroText: white;
        font-family: $font-family;
        font-size: 16px;
        color: $colorNavText;
-       &:hover {
-        transition: text-decoration 2s;
-       }
+       
     }
 }
 
@@ -93,18 +92,180 @@ $colorIntroText: white;
         padding-bottom: 48px;
     }
 
-    .intro__button {
-        width: 160px;
-        height: 30px;
-        background-color: transparent;
-        border: solid 2px white;
-        text-transform: uppercase;
-        color: white;
-        transition: all 2s;
-        cursor: pointer;
-        &:hover {
-            background-color: black;
-        }
+   
+}
+
+/* Button style
+========================================*/ 
+
+.button {
+    display: inline-block;
+    width:200px;
+    height: 50px ;
+    background-color: transparent;
+    cursor: pointer;
+    color: $colorTextAbout;
+    border: solid 2px rgb(255, 255, 255);
+    text-transform: uppercase;
+    transition: all 2s;
+    &:hover {
+        background-color: black;
     }
 }
+
+/*=================================================*/ 
+
+/* Benefits
+============================================*/
+
+.benefits {
+    display: flex;
+    justify-content: space-between;
+    background-image: url("../img/bgbg.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 144px 0;
+    
+    .leftlist {
+        list-style-type:none;
+    }
+
+    .rightlist {
+        list-style-type:none;
+    }
+}
+
+.itemlf {
+    padding-bottom: 48px;
+    &__content {
+        width: 272px;
+        position: relative;
+        text-align: right;
+        font-family: $font-family;
+
+        &--one::after {
+           content: url("../img/indoor.png");
+           position: absolute;
+           right: -71px;
+           top: 0;
+           left: auto;
+        }
+
+        &--two::after {
+            content: url("../img/petfriendly.png");
+            position: absolute;
+            right: -71px;
+            top: 0;
+            left: auto;
+        }
+        &--three::after {
+            content: url("../img/tekaaway.png");
+            position: absolute;
+            right: -71px;
+            top: 0;
+            left: auto;
+        }
+    }
+    
+    &__title {
+        text-transform: uppercase;
+        font-size: 16px;
+        line-height: 24px;
+    }
+
+    &__description  {
+        font-size: 14px;
+        line-height: 24px;
+    }
+}
+
+.itemrl {
+    padding-bottom: 48px;
+    
+    &__content {
+        width: 272px;
+        position: relative;
+        text-align: left;
+        font-family: $font-family;
+
+        &--one::before {
+            content: url("../img/wheelchair.png");
+            position: absolute;
+            right: auto;
+            top: 0;
+            left: -80px;
+        }
+
+        &--two::before {
+            content: url("../img/veganoptions.png");
+            position: absolute;
+            right: auto;
+            top: 0;
+            left: -80px;
+        }
+
+        &--three::before {
+            content: url("../img/cyclistfriendly.png");
+            position: absolute;
+            right: auto;
+            top: 0;
+            left: -80px ;
+        }
+    }
+
+    &__title {
+        font-size: 16px;
+        text-transform: uppercase;
+        line-height: 24px;
+    }
+    
+    &__description {
+        font-size: 14px;
+        line-height: 24px;
+    }
+
+}
+/*=======================================================*/ 
+
+/* About 
+=======================================================*/ 
+
+.about {
+    height: 432px;
+    background-image: url("../img/about.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &__content {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        color: $colorTextAbout;
+        padding-top: 90px;
+    }
+
+    &__title {
+       font-size: 40px;
+       padding-bottom: 24px;
+       &::after {
+        content: '';
+        display: block;
+        border-bottom: 2px solid ;
+        color: #ffffffff ;
+        width: 189px;
+        padding-top: 24px;
+        margin: 0 auto;
+       }
+    }
+
+    &__description {
+       font-size: 16px;
+       padding-bottom: 48px;
+    }
+
+}
+
+/*===================================*/ 
 
