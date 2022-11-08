@@ -314,43 +314,90 @@
         <ul class="news__content news-content">
           <li class="news-content__item">
              <div class="news-content__img">
-              <img src="img/news1.png" alt="">
+              <a href="#"><img src="img/news1.png" alt=""></a>
              </div>
               <div class="news-content__inner">
                   <h3 class="news-content__title">Moka pot</h3>
                   <p class="news-content__description">It is a long established fact that a reader will be distracted by the readable 
                     content of a page when looking at its layout. The point of using Lorem 
                     Ipsum is that it has a more-or-less normal </p>
-                  <a href="" class="news-content__per">- Read more</a>
               </div>
+              <a href="#" class="news-content__per">- Read more</a>
            </li>
            <li class="news-content__item">
               <div class="news-content__img">
-                <img src="img/news2.png" alt="">
+                <a href="#"><img src="img/news2.png" alt=""></a>
               </div>
              <div class="news-content__inner">
                 <h3 class="news-content__title">Women in Coffee - Women’s Collective</h3>
                 <p class="news-content__description">Our Quality Control Lead in Melbourne, 
                   Jane Doe, is instrumental in selecting single origin coffee for Coffe House Espresso.</p>
-                <a href="" class="news-content__per">- Read more</a>
+                
              </div>
+             <a href="#" class="news-content__per">- Read more</a>
            </li>
            <li class="news-content__item">
               <div class="news-content__img">
-                <img src="img/news3.png" alt="">
+                <a href="" class=""><img src="img/news3.png" alt=""></a>
               </div>
              <div class="news-content__inner">
                 <h3 class="news-content__title">Coffee Roasters and Espresso Specialists - Our Story</h3>
                 <p class="news-content__description">Coffee House is built on relationships. Our success as a coffee roaster is down to 
                   the success of the people we choose to partner with – 
                   from our first café customer, to our staff around the world.</p>
-                <a href="" class="news-content__per">- Read more</a>
              </div>
+             <a href="#" class="news-content__per">- Read more</a>
            </li>
         </ul>
       </section>
+      <section class="location">
+        <div class="container">
+          <h2 class="section__title location__title">Our locations</h2>
+          <p class="section__subtitle location__description">Come drink a coffee with us 
+            on Fleet Street or Chancery Lane!</p>
+          <ul class="location__content location-content">
+            <li class="location-content__item">
+              <img src="img/loc1.png" alt="Fleet Street Press">
+              <h3 class="location-content__title">Fleet Street Press</h3>
+               <div class="location-content__inner">
+                <time class="location-content__time">Mon - Sun:  10:00 - 00:00</time>
+                <address class="location-contact__address">3 Fleet Street, London EC4Y 1AU</address>
+               </div>
+            </li>
+            <li class="location-content__item">
+              <img src="img/loc2.png" alt="Chancery Press">
+              <h3 class="location-content__title">Chancery Press</h3>
+               <div class="location-content__inner">
+                <time class="location-content__time">Mon - Sun:  10:00 - 00:00</time>
+                <address class="location-contact__address">81 Chancery Lane, London WC2A 1DD</address>
+               </div>
+            </li>
+            <li class="location-content__item">
+              <img src="img/loc3.png" alt="SHOREDITCH">
+              <h3 class="location-content__title">SHOREDITCH</h3>
+               <div class="location-content__inner">
+                <time class="location-content__time">Mon - Sun:  10:00 - 00:00</time>
+                <address class="location-contact__address">Unit 15, Stone Trading Estate
+                  Milkwood Road, Herne Hill
+                  SE24 0JU</address>
+               </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      <section class="newslatter">
+        <div class="container">
+          <h2 class="section__title newslatter__title">Our newsletter</h2>
+          <p class="section__subtitle newslatter__description">Available all day! We can not guarantee our
+             foods are allergen-free. Service charge not included.</p>
+        </div>
+        <form action="" class="newslatter__form newslatter-form">
+           <input type="text" name="email" class="newslatter-form__input" placeholder="Your E-mail Adress...">
+           <button type="submit" class="newslatter-form__btn">subscribe</button>
+        </form>
+      </section>
   </main>
-
+  @@include('html/footer.html',{})   
   <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
 <script src="js/app.min.js"></script>
 </body>
