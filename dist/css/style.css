@@ -35,12 +35,47 @@ h1, h2, h3, h4, h5, h6, p, li, ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 48px 40px 0 40px;
+  padding: 48px 40px 40px 40px;
 }
 
+.header._black {
+  background-color: #444444;
+}
+
+@media (max-width: 1200px) {
+  .nav {
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+    transition: all 1s ease;
+    position: absolute;
+  }
+}
+.nav._active {
+  visibility: visible;
+  opacity: 1;
+  margin: 470px 0 0 0;
+  width: 100%;
+  right: 0;
+  text-align: center;
+  z-index: 1;
+  background-color: #444444;
+}
 .nav__list {
   display: flex;
   list-style-type: none;
+}
+@media (max-width: 1200px) {
+  .nav__list {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+  }
+}
+.nav-list__item {
+  margin-bottom: 20px;
 }
 .nav__item {
   margin-right: 40px;
@@ -49,6 +84,45 @@ h1, h2, h3, h4, h5, h6, p, li, ul {
   font-family: "Inter", sans-serif;
   font-size: 16px;
   color: white;
+}
+@media (max-width: 1200px) {
+  .nav__item {
+    font-size: 30px;
+  }
+}
+
+.burger {
+  display: none;
+}
+@media (max-width: 1200px) {
+  .burger {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 18px;
+    z-index: 5;
+  }
+  .burger span, .burger::before, .burger::after {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 10%;
+    transition: all 0.2s linear;
+    background-color: #fff;
+  }
+  .burger::before, .burger::after {
+    content: "";
+  }
+  .burger::before {
+    top: 0;
+  }
+  .burger::after {
+    bottom: 0;
+  }
+  .burger span {
+    top: 50%;
+    transform: translate(0px, -50%);
+  }
 }
 
 /*===================================================*/
@@ -81,17 +155,28 @@ h1, h2, h3, h4, h5, h6, p, li, ul {
   font-size: 96px;
   font-weight: 700px;
 }
+@media (max-width: 800px) {
+  .intro__inner .main__title {
+    font-size: 60px;
+  }
+}
 .intro__inner .main__description {
   font-size: 32px;
   padding-bottom: 48px;
+}
+@media (max-width: 800px) {
+  .intro__inner .main__description {
+    font-size: 25px;
+  }
 }
 
 /* Button style
 ========================================*/
 .button {
   display: inline-block;
-  width: 200px;
-  height: 50px;
+  text-decoration: none;
+  padding: 20px 45px;
+  vertical-align: top;
   background-color: transparent;
   cursor: pointer;
   color: white;
@@ -114,6 +199,13 @@ h1, h2, h3, h4, h5, h6, p, li, ul {
   background-position: center;
   margin: 144px 0;
 }
+@media (max-width: 800px) {
+  .benefits {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
 .benefits .leftlist {
   list-style-type: none;
 }
@@ -130,26 +222,85 @@ h1, h2, h3, h4, h5, h6, p, li, ul {
   text-align: right;
   font-family: "Inter", sans-serif;
 }
+@media (max-width: 800px) {
+  .itemlf-content {
+    text-align: left;
+  }
+}
+.itemlf-content--one::before {
+  content: url("../img/indoor.png");
+  position: absolute;
+  left: auto;
+  top: 0;
+  left: -71px;
+}
+@media (min-width: 800px) {
+  .itemlf-content--one::before {
+    display: none;
+  }
+}
 .itemlf-content--one::after {
   content: url("../img/indoor.png");
+  display: block;
   position: absolute;
   right: -71px;
   top: 0;
   left: auto;
+}
+@media (max-width: 800px) {
+  .itemlf-content--one::after {
+    display: none;
+  }
+}
+.itemlf-content--two::before {
+  content: url("../img/petfriendly.png");
+  position: absolute;
+  right: auto;
+  top: 0;
+  left: -71px;
+}
+@media (min-width: 800px) {
+  .itemlf-content--two::before {
+    display: none;
+  }
 }
 .itemlf-content--two::after {
   content: url("../img/petfriendly.png");
+  display: block;
   position: absolute;
   right: -71px;
   top: 0;
   left: auto;
 }
+@media (max-width: 800px) {
+  .itemlf-content--two::after {
+    display: none;
+  }
+}
+.itemlf-content--three::before {
+  content: url("../img/tekaaway.png");
+  position: absolute;
+  right: auto;
+  top: 0;
+  left: -71px;
+}
+@media (min-width: 800px) {
+  .itemlf-content--three::before {
+    display: none;
+  }
+}
 .itemlf-content--three::after {
   content: url("../img/tekaaway.png");
+  display: block;
   position: absolute;
   right: -71px;
   top: 0;
   left: auto;
+}
+@media (max-width: 800px) {
+  .itemlf-content--three::after {
+    display: none;
+  }
 }
 .itemlf-content__title {
   text-transform: uppercase;
@@ -326,12 +477,6 @@ h1, h2, h3, h4, h5, h6, p, li, ul {
 .swiper {
   width: 100%;
   height: 100%;
-  /*&-slide img {
-      display: block;
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-  } */
 }
 .swiper-slide {
   text-align: center;
@@ -551,10 +696,25 @@ h1, h2, h3, h4, h5, h6, p, li, ul {
   color: white;
   padding: 48px 0;
 }
+@media (max-width: 800px) {
+  .footer {
+    flex-direction: column;
+    column-gap: 25px;
+  }
+}
+.footer__text {
+  margin-bottom: 10px;
+}
 .footer-list {
   display: flex;
   justify-content: space-between;
   list-style-type: none;
+}
+@media (max-width: 800px) {
+  .footer-list {
+    flex-direction: column;
+    column-gap: 10px;
+  }
 }
 .footer-list__item {
   margin-right: 46px;
@@ -566,6 +726,12 @@ h1, h2, h3, h4, h5, h6, p, li, ul {
 .footer-list__item:hover {
   font-size: 20px;
 }
+@media (max-width: 800px) {
+  .footer-list__item {
+    margin: 0;
+    margin-bottom: 15px;
+  }
+}
 .footer-list__inner {
   text-decoration: none;
   color: white;
@@ -574,17 +740,31 @@ h1, h2, h3, h4, h5, h6, p, li, ul {
   display: flex;
   list-style-type: none;
 }
+@media (max-width: 800px) {
+  .footer-social {
+    flex-direction: column;
+  }
+}
 .footer-social__item {
   margin-right: 34px;
+}
+@media (max-width: 800px) {
+  .footer-social__item {
+    margin-bottom: 10px;
+    margin: 0;
+  }
 }
 .footer-social__item:last-child {
   margin-right: 0;
 }
-.footer-social__inner {
-  width: 80px;
-  height: 80px;
-  background-color: white;
-}
 .footer__svg {
   fill: black;
+  width: 35px;
+  height: 35px;
+  border: solid 2px;
+  border-radius: 20px;
+  transition: all 1s;
+}
+.footer__svg:hover {
+  transform: scale(1.2) 1s;
 }
