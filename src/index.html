@@ -5,13 +5,8 @@
     "title":"Coffee House"
 })
 <body>
-    <!--sprite-->
-
-
-
-    <!-------->
  @@include('html/header.html',{})   
- <div class="intro">
+ <div id="home" class="intro">
     <div class="container">
         <div class="intro__inner">
             <img src="img/label.png" alt="Coffee" class="label">
@@ -24,8 +19,8 @@
     </div>
  </div>
  <main>
-   <div class="container">
-        <section class="benefits">
+   <div  class="container">
+        <section id="benefits"  class="benefits">
             <ul class="leftlist">
                 <li class="itemlf">
                     <div class="itemlf__content itemlf-content itemlf-content--one ">
@@ -80,7 +75,7 @@
             </ul>
         </section>
    </div>
-   <section class="about">
+   <section id="about" class="about">
         <div class="container">
             <div class="about__content">
                 <h2 class="section__title about__title">Looking for a fresh coffee?</h2>
@@ -90,7 +85,7 @@
             </div>
         </div>
     </section>
-    <section class="menu">
+    <section id="menu" class="menu">
         <div class="container">
             <h2 class=" section__title menu__title">Explore our menu</h2>
                 <p class="section__subtitle menu__description">Available all day! We can not guarantee our 
@@ -98,11 +93,12 @@
         </div>
         <div class="tabs">
             <div class="tabs__buttons tabs-buttons">
-                <button class="tabs-buttons__food">FOOD</button>
-                <button class="tabs-buttons__drinks">DRINKS</button>
+                <button class="tabs-buttons__menu">FOOD</button>
+                <button class="tabs-buttons__menu">DRINKS</button>
             </div>
             <div class="tabs__content tabs-content">
-                <ul class="tabs-content__food ">
+              <div class="tabs-content__show">
+                <ul class="tabs-content__list ">
                    <li class="tabs-content__item">
                       <img src="../img/img1.png" alt="Prufrock Breakfast Bun" class="tabs-content__img">
                       <div class="tabs-content__inner">
@@ -204,7 +200,9 @@
                     <p class="tabs-content__price>">$3</p>
                  </li>
                 </ul>
-                <ul class="tabs-content__drinks">
+              </div>
+              <div class="tabs-content__show">
+                <ul class="tabs-content__list">
                     <li class="tabs-content__item">
                        <img src="" alt="Prufrock Breakfast Bun" class="tabs-content__img">
                        <h3 class="tabs-content__title">Prufrock Breakfast Bun</h3>
@@ -285,11 +283,12 @@
                      </p>
                      <p class="tabs-content__price>">$3</p>
                   </li>
-                 </ul>
+                </ul>
+              </div>
             </div>
         </div>
       </section>
-      <section class="testimonials">
+      <section id="testimonials" class="testimonials">
         <div class="container">
            <h2 class="section__title testimonials__title">Looking for a fresh coffee?</h2>
             <div class="swiper mySwiper">
@@ -305,7 +304,7 @@
             </div>
         </div>
       </section>
-      <section class="news">
+      <section id="news" class="news">
         <div class="container">
           <h2 class="section__title news__title">News</h2>
                 <p class="section__subtitle news__description">Stay updated on all the 
@@ -350,7 +349,7 @@
            </li>
         </ul>
       </section>
-      <section class="location">
+      <section id="location" class="location">
         <div class="container">
           <h2 class="section__title location__title">Our locations</h2>
           <p class="section__subtitle location__description">Come drink a coffee with us 
@@ -385,7 +384,7 @@
           </ul>
         </div>
       </section>
-      <section class="newslatter">
+      <section id="newslatter" class="newslatter">
         <div class="container">
           <h2 class="section__title newslatter__title">Our newsletter</h2>
           <p class="section__subtitle newslatter__description">Available all day! We can not guarantee our
