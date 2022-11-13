@@ -1,8 +1,5 @@
-//@import "fonts.scss";
+@import "fonts.scss";
 @import "reset.scss";
-
-//@import url(../css/reset.min.css);
-//@import url(../css/fonts.min.css);
 
 
 $font-family: "Inter", sans-serif;
@@ -51,12 +48,13 @@ $colorFooter: white ;
         &._active {
             visibility: visible;
             opacity: 1;
-            margin: 400px 0 0 0;
+            margin: 430px 0 0 0;
             width: 100%;
             right: 0;
             text-align: center;
             z-index: 1;
             background-color: #444444 ;
+            overflow: hidden;
         }
     }
 
@@ -70,6 +68,7 @@ $colorFooter: white ;
        @media  (max-width: 1200px) {
            
             flex-direction: column;
+            //align-items: flex-start;
             text-align: center;
             overflow-y: scroll;
             scroll-snap-type: y mandatory;
@@ -99,6 +98,7 @@ $colorFooter: white ;
        @media (max-width: 1200px) {
         font-size: 30px;
         margin-right: 0;
+       // padding-left: 40px;
        }
        
     }
@@ -190,6 +190,7 @@ $colorFooter: white ;
         padding-bottom: 24px ;
         font-size: 96px;
         font-weight: 700px;
+        font-family: $font-family;
         @media (max-width: 800px){
             font-size: 60px;
         }
@@ -199,6 +200,7 @@ $colorFooter: white ;
         //padding-bottom: 48px ;
         font-size: 32px;
         padding-bottom: 48px;
+        font-family: $font-family;
         @media (max-width: 800px){
             font-size: 25px;
         }
@@ -221,6 +223,7 @@ $colorFooter: white ;
     border: solid 2px rgb(255, 255, 255);
     text-transform: uppercase;
     transition: all 2s;
+    font-family: $font-family;
     &:hover {
         background-color: black;
     }
@@ -262,6 +265,7 @@ $colorFooter: white ;
         width: 272px;
         position: relative;
         text-align: right;
+        font-family: $font-family;
         font-family: $font-family;
         @media (max-width: 800px) {
             text-align: left;
@@ -343,11 +347,13 @@ $colorFooter: white ;
         text-transform: uppercase;
         font-size: 16px;
         line-height: 24px;
+        font-family: $font-family;
     }
 
     &-content__description  {
         font-size: 14px;
         line-height: 24px;
+        font-family: $font-family;
     }
 }
 
@@ -417,6 +423,7 @@ $colorFooter: white ;
         text-align: center;
         color: $colorTextAbout;
         padding-top: 90px;
+        font-family: $font-family;
     }
 
     &__description {
@@ -434,6 +441,7 @@ $colorFooter: white ;
 .section__title {
     font-size: 40px;
     padding-bottom: 24px;
+    font-family: $font-family;
     &::after {
      content: '';
      display: block;
@@ -447,6 +455,7 @@ $colorFooter: white ;
 
 .section__subtitle {
     font-size: 16px;
+    font-family: $font-family;
 }
 
 /*===================================================*/ 
@@ -462,6 +471,7 @@ $colorFooter: white ;
 
     &__title {
         margin-top: 96px;
+        font-family: $font-family;
         &::after {
             color: black ;
         }
@@ -505,6 +515,7 @@ $colorFooter: white ;
         margin: 24px;
         align-items: center;
         text-align: left;
+        font-family: $font-family;
     }
     
     &-content__inner {
@@ -515,11 +526,13 @@ $colorFooter: white ;
 
     &-content__title {
         font-size: 16px;
+        font-family: $font-family;
     }
 
     &-content__description {
         font-size: 12px;
         line-height: 24px;
+        font-family: $font-family;
     }
 
 }
@@ -539,6 +552,7 @@ $colorFooter: white ;
    &__title {
     color: $colorTestimonials;
     padding: 96px 0;
+    font-family: $font-family;
    }
 }
 
@@ -574,6 +588,7 @@ $colorFooter: white ;
         max-width: 735px;
         color: $colorTestimonials;
         line-height: 48px;
+        font-family: $font-family;
     }
 
     &-pagination-bullet-active {
@@ -594,6 +609,7 @@ $colorFooter: white ;
     &__title {
         color: black;
         padding-top: 97px;
+        font-family: $font-family;
         &::after {
             content: '';
             display: block;
@@ -608,6 +624,7 @@ $colorFooter: white ;
     &__description {
         color: black;
         line-height: 24px;
+        font-family: $font-family;
     }
 
     &-content {
@@ -646,6 +663,7 @@ $colorFooter: white ;
         width: 352px;
         text-align: left;
         padding-top: 24px;
+        font-family: $font-family;
     }
     
     &-content__title {
