@@ -22,6 +22,12 @@ burger.addEventListener("click", () => {
   burger.classList.toggle("_active");
   nav.classList.toggle("_active");
   burgerContent.classList.toggle("_active");
+
+  if (burger.classList.contains("_active")) {
+    header.classList.add("_black")
+  } else {
+    header.classList.remove("_black");
+  }
 });
 
 
